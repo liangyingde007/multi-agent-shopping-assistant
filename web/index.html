@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="梁应德的智能导购项目演示：输入预算与偏好，体验商品筛选、对比和推荐。">
+  <title>智能导购 · 梁应德的项目演示</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#shopping-form">跳到需求输入</a>
+  <header class="header wrap">
+    <a class="brand" href="/" aria-label="智能导购首页"><span class="brand-mark" aria-hidden="true">s.</span>选物<span class="brand-en">SHOPPING ASSISTANT</span></a>
+    <a class="source-link" href="https://github.com/liangyingde007/multi-agent-shopping-assistant" target="_blank" rel="noopener noreferrer">查看源码 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow"><span class="dot" aria-hidden="true"></span>梁应德 · 项目演示</p><h1 id="page-title">找到适合你的，<br>从需求开始。</h1><p class="intro-copy">告诉我预算和偏好，看看商品如何被筛选、比较与推荐。</p></div>
+      <div class="intro-note"><span class="note-number">01 — 04</span><p>理解需求 / 筛选商品<br>比较偏好 / 生成推荐</p><span class="sample-label">示例商品 · 无需登录</span></div>
+    </section>
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="input-title">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="input-title">你的需求</h2></div>
+        <form id="shopping-form">
+          <label for="category">想选什么</label>
+          <select id="category" name="category"><option value="phone">手机</option><option value="laptop">笔记本</option><option value="headphones">耳机</option></select>
+          <label for="budget">最高预算 <span class="optional">选填</span></label>
+          <div class="money-input"><span aria-hidden="true">¥</span><input id="budget" name="budget" type="number" inputmode="numeric" min="1" max="100000" step="1" placeholder="例如 4000" aria-describedby="budget-help"></div>
+          <p class="field-help" id="budget-help">留空时，可从下方文字中的“预算4000”识别。</p>
+          <label for="query">说说你的使用场景</label>
+          <textarea id="query" name="query" rows="3" maxlength="500" required placeholder="例如：预算4000元，想买拍照好、续航不错的手机。"></textarea>
+          <fieldset><legend>更看重什么 <span class="optional">选填，可多选</span></legend><div id="priorities" class="chips"></div></fieldset>
+          <p class="field-help">不勾选时，会从描述中识别常见偏好。</p>
+          <button type="submit" id="submit" class="submit">帮我选一选 <span aria-hidden="true">↗</span></button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="examples"><p class="eyebrow">或者，试试这些需求</p><button type="button" data-example="camera">4000 元，拍照手机 <span aria-hidden="true">→</span></button><button type="button" data-example="work">6000 元，开发笔记本 <span aria-hidden="true">→</span></button><button type="button" data-example="audio">800 元，通勤降噪耳机 <span aria-hidden="true">→</span></button></div>
+      </section>
+      <section class="result-panel" aria-labelledby="result-title" aria-busy="false">
+        <div class="section-heading"><span class="section-index">02</span><h2 id="result-title">为你比较</h2><span class="result-meta" id="result-meta">等待你的需求</span></div>
+        <div id="results">
+          <div class="empty-state"><div class="empty-art" aria-hidden="true"><div class="art-orbit"></div><div class="art-phone"><i></i><span>从你<br>出发。</span></div><span class="art-star">✳</span><span class="art-tag">YOUR CHOICE</span></div><h3>每一种偏好，都有理由。</h3><p>输入需求，或点选一个示例。<br>推荐会展示预算、评分依据和备选商品。</p><div class="empty-foot"><span>12 件示例商品</span><span>3 个品类</span><span>4 步处理流程</span></div></div>
+        </div>
+      </section>
+    </div>
+    <aside class="demo-note"><strong>关于这个演示</strong><p>商品名称、价格和评分均为构造的示例数据，不代表在售商品或实时行情。当前推荐通过规则解析、预算过滤与偏好评分完成，未调用大模型，也不提供购买或付款功能。</p></aside>
+  </main>
+  <footer class="footer wrap"><span>梁应德 · 智能导购项目</span><a href="/docs" target="_blank" rel="noopener noreferrer">接口文档 ↗</a><span>让选择的过程，看得见。</span></footer>
+</body>
+</html>

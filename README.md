@@ -1,5 +1,28 @@
 # Multi-Agent 智能导购系统
 
+## 当前可运行版本（2026-10-03）
+
+当前版本为带网页界面的导购演示，使用 12 件构造的示例商品，支持手机、笔记本、耳机三个品类。输入预算和偏好后，真实执行 Planner → Product → Compare → Recommendation 四个角色的顺序流程，返回预算内商品、比较表、推荐理由和处理记录；无匹配商品时不会推荐超预算商品。
+
+**当前没有调用 LLM、LangGraph、向量数据库或真实商城接口。** 推荐来自规则解析、预算过滤和示例评分，商品、价格、评分均不代表真实市场情况。后文保留的 LLM / RAG / 优惠架构是原有设计目标，不能作为本演示已实现功能的说明。
+
+启动（Python 3.12，在仓库根目录执行）：
+
+```bash
+python -m venv .venv
+# 激活环境后：
+python -m pip install -r requirements-deploy.txt
+python -m backend.serve
+```
+
+访问 `http://127.0.0.1:8000/`；健康检查 `/healthz`；接口文档 `/docs`；JSON 接口 `POST /api/chat`。部署入口支持平台提供的 `PORT` 环境变量。原 `POST /chat?query=...` 保留兼容。
+
+部署说明见 [DEPLOYMENT.md](DEPLOYMENT.md)。当前只有本地运行结果，公网地址尚未创建。`requirements-deploy.txt` 为本次实际运行环境的固定依赖；原 `requirements.txt` 保留设计实验依赖。
+
+---
+
+## 以下为原有项目背景与设计目标
+
 ## 项目背景
 
 随着 3C 数码产品线上消费规模不断扩大，用户在购买手机、电脑等产品时，需要综合考虑价格、性能、拍摄能力、使用场景以及优惠活动等多维因素。

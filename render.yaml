@@ -1,0 +1,11 @@
+# Optional provider template. Creating a service requires a chosen account.
+services:
+  - type: web
+    name: lyd-shop
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: PORT
+        value: "8000"

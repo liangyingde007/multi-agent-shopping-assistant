@@ -1,12 +1,178 @@
 [
   {
-    "name": "小米15",
+    "id": "p01",
+    "name": "影像旗舰 A",
+    "category": "phone",
     "price": 3999,
-    "feature": "徕卡影像，旗舰处理器"
+    "feature": "适合重视拍照与日常流畅度的使用者",
+    "ratings": {
+      "camera": 5,
+      "performance": 4,
+      "battery": 4,
+      "portable": 3,
+      "value": 3,
+      "gaming": 4
+    }
   },
   {
-    "name": "iPhone 15",
-    "price": 4999,
-    "feature": "优秀视频拍摄能力"
+    "id": "p02",
+    "name": "均衡手机 B",
+    "category": "phone",
+    "price": 2999,
+    "feature": "日常拍照、性能与价格更均衡",
+    "ratings": {
+      "camera": 4,
+      "performance": 4,
+      "battery": 4,
+      "portable": 4,
+      "value": 5,
+      "gaming": 4
+    }
+  },
+  {
+    "id": "p03",
+    "name": "长续航手机 C",
+    "category": "phone",
+    "price": 1999,
+    "feature": "适合通勤、长时间外出与基础应用",
+    "ratings": {
+      "camera": 3,
+      "performance": 3,
+      "battery": 5,
+      "portable": 3,
+      "value": 5,
+      "gaming": 3
+    }
+  },
+  {
+    "id": "p04",
+    "name": "入门手机 D",
+    "category": "phone",
+    "price": 1299,
+    "feature": "预算优先，满足基础通信与日常应用",
+    "ratings": {
+      "camera": 2,
+      "performance": 2,
+      "battery": 4,
+      "portable": 4,
+      "value": 5,
+      "gaming": 2
+    }
+  },
+  {
+    "id": "l01",
+    "name": "轻薄办公本 A",
+    "category": "laptop",
+    "price": 4499,
+    "feature": "以移动办公、文档处理与便携为重点",
+    "ratings": {
+      "performance": 3,
+      "battery": 5,
+      "portable": 5,
+      "value": 4,
+      "office": 5,
+      "gaming": 1
+    }
+  },
+  {
+    "id": "l02",
+    "name": "开发笔记本 B",
+    "category": "laptop",
+    "price": 5999,
+    "feature": "适合开发工具、多任务与日常办公",
+    "ratings": {
+      "performance": 5,
+      "battery": 4,
+      "portable": 3,
+      "value": 4,
+      "office": 5,
+      "gaming": 3
+    }
+  },
+  {
+    "id": "l03",
+    "name": "游戏笔记本 C",
+    "category": "laptop",
+    "price": 7499,
+    "feature": "适合优先考虑游戏与性能的使用者",
+    "ratings": {
+      "performance": 5,
+      "battery": 2,
+      "portable": 2,
+      "value": 3,
+      "office": 4,
+      "gaming": 5
+    }
+  },
+  {
+    "id": "l04",
+    "name": "基础笔记本 D",
+    "category": "laptop",
+    "price": 3299,
+    "feature": "适合文档、网课与预算有限的基础办公",
+    "ratings": {
+      "performance": 2,
+      "battery": 3,
+      "portable": 4,
+      "value": 5,
+      "office": 4,
+      "gaming": 1
+    }
+  },
+  {
+    "id": "h01",
+    "name": "通勤降噪耳机 A",
+    "category": "headphones",
+    "price": 699,
+    "feature": "以通勤降噪、便携与续航为重点",
+    "ratings": {
+      "audio": 4,
+      "noise": 5,
+      "battery": 4,
+      "portable": 5,
+      "value": 4
+    }
+  },
+  {
+    "id": "h02",
+    "name": "音乐头戴耳机 B",
+    "category": "headphones",
+    "price": 1299,
+    "feature": "适合更重视音质和长时间聆听的使用者",
+    "ratings": {
+      "audio": 5,
+      "noise": 4,
+      "battery": 5,
+      "portable": 2,
+      "value": 3
+    }
+  },
+  {
+    "id": "h03",
+    "name": "轻巧无线耳机 C",
+    "category": "headphones",
+    "price": 299,
+    "feature": "轻巧便携，满足日常听歌与通话",
+    "ratings": {
+      "audio": 3,
+      "noise": 2,
+      "battery": 4,
+      "portable": 5,
+      "value": 5
+    }
+  },
+  {
+    "id": "h04",
+    "name": "入门有线耳机 D",
+    "category": "headphones",
+    "price": 99,
+    "feature": "价格优先，无需充电的基础聆听方案",
+    "ratings": {
+      "audio": 2,
+      "noise": 1,
+      "battery": 5,
+      "portable": 4,
+      "value": 5
+    }
   }
 ]
